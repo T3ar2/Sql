@@ -65,6 +65,7 @@ select nome, valor_total from cliente inner join pedido on cliente.id_cliente = 
 select id_pedido, data_pedido, valor_total from pedido where data_pedido  >= 2023-09-01 and data_pedido >= 2023-09-30;
 
 #8. Liste os clientes que comprárám máis de um produto em um unico pedido
+select * from cliente inner join itempedido on cliente.id_cliente = itempedido.id_pedido where quantidade > 2;
 
 #9. Exibá os pedidos que contem o produto 'Smártphone'
 select * from itempedido inner join produto on  itempedido.id_item_pedido = produto.id_produto where nome_produto in  ('Smartphone');
