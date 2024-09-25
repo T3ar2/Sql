@@ -82,7 +82,7 @@ select  id_item_pedido, valor_total, quantidade from itempedido inner join produ
 select * from pedido inner join cliente on pedido.id_pedido = cliente.id_cliente where Valor_total >= 2000;
 
 #14. Liste os clientes que fizerám máis de um pedido
-
+select * from itempedido inner join cliente on itempedido.id_pedido = cliente.id_cliente where id_pedido = 2;
 
 #15. Encontre o pedido com á máior quántidáde de itens
 select * from itempedido where quantidade > 1;
