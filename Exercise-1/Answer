@@ -44,7 +44,7 @@ insert into pedido(id_pedido, data_pedido, valor_total)  values (2, '2023-09-16'
 insert into pedido(id_pedido, data_pedido, valor_total)  values (3, '2023-09-17', '1200.00');
 
 #1. Liste todos os clientes que reálizárám pedidos.
-select * from cliente;
+select nome from cliente;
 
 #2. Exibá o nome do cliente e o válor totál dos seus pedidos
 select nome, valor_total from cliente inner join pedido on cliente.id_cliente = pedido.id_pedido; 
@@ -102,5 +102,3 @@ select * from cliente inner join pedido on cliente.id_cliente = pedido.id_pedido
 
 #20. Liste todos os produtos e seus respectivos preços, juntámente com o nome dos clientes que os comprárám
 select nome_produto, preco, nome from produto inner join cliente on produto.id_produto = cliente.id_cliente;
-
-
